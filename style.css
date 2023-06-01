@@ -1,0 +1,291 @@
+:root {
+    --light-red: rgb(255, 87, 87);
+    --orange-yellow: rgb(255, 176, 31);
+    --green-teal: rgb(0, 189, 145);
+    --cobalt-blue: rgb(17, 37, 212);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    font-family: Hanken Grotesk;
+    font-size: 18px;
+    height: 100vh;
+    height: 100svh;
+}
+
+
+.main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score-container {
+    display:flex;
+    align-items: center;
+    text-align: center;
+    flex-flow: column;
+    width: 100%;
+    padding: 20px;
+    background-image: linear-gradient(180deg, rgb(148, 109, 255) 0%, rgba(36,33,202,1) 41%);
+    height: 300px;
+    color: white;
+    border-radius: 0 0 30px 30px 
+}
+
+.score-container #title {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.circle {
+    /*border-radius: 50%;*/
+    background-image: linear-gradient(#4e21ca, #2421ca);
+    width: 120px;
+    height: 120px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circle-text h1 {
+    font-size: 3.3rem;
+    margin-bottom: -10px;
+}
+
+.circle-text p {
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+.score-container h3 {
+    margin: 20px 0 4px; 
+}
+
+.score-container #statics{
+    font-size: 0.9rem;
+    width: 75%;
+    opacity: 0.6;
+}
+
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+#summary-title{
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+#summary > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(194, 194, 194, 0.1);
+}
+
+/*these are the boxes with data inside*/
+#summary > div:nth-of-type(1) {
+    background-color: rgba(255, 87, 87, 0.05);
+}
+
+#summary >div:nth-of-type(2) {
+    background-color: rgba(255, 176, 31, 0.05);
+}
+
+#summary >div:nth-of-type(3) {
+    background-color: rgba(0, 189, 145, 0.05);
+}
+
+#summary >div:nth-of-type(4) {
+    background-color: rgba(17, 37, 212, 0.05);
+}
+
+/* selector of all data boxes imgs*/
+#summary div:nth-child(1) {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+
+#summary > div > div > img ~ p{
+    margin-left: 7px;
+    font-size: 1rem;
+}
+
+#summary > div:nth-of-type(1) > div > p {
+    color: var(--light-red);
+}
+
+#summary > div:nth-of-type(2) > div > p {
+    color: var(--orange-yellow);
+}
+
+#summary > div:nth-of-type(3) > div > p {
+    color: var(--green-teal);
+}
+
+#summary > div:nth-of-type(4) > div > p {
+    color: var(--cobalt-blue);
+}
+
+#btn-div {
+    margin-bottom: 10px;
+    padding: 0px 10px;
+    width: 100%
+}
+
+#continue-btn {
+    background-color: #303b5a;
+    color: white;
+    font-family: Hanken Grotesk;
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+#continue-btn:hover {
+    background-image: linear-gradient(#7857ff, #2e2be9);
+    cursor: pointer;
+    border: none;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+@media (min-width: 576px) {
+    
+    .card {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        height: 450px;
+        width: 600px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 10px 10px 51px 9px rgba(0,0,0,0.13);
+        border-radius: 25px;
+    }
+
+    .score-container {
+        display:flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        
+    }
+
+    .score-container #title {
+        margin-top: 20px;
+        font-size: 1.3rem;
+    }
+
+    .circle {
+        width: 175px;
+        height: 175px;
+        margin-top: 10px;
+    }
+  
+    .score-container h3 {
+        font-size: 1.5rem;
+        margin-top: 30px; 
+    }
+
+    /* .score-container #statics {
+        font-size: 1.1rem;
+
+    } */
+
+    .summary-container {
+        height: 100%;
+        padding: 26px 20px 0px;
+        justify-content: space-around;
+    }
+    
+    #summary-title{
+        font-size: 1.4rem;
+        margin-bottom: 2px;
+    }
+    
+    #summary > div {
+        height: 45px;
+        align-items: center;
+    }
+
+    #btn-div {
+        margin-bottom: 50px;
+        padding: 0px 0px;
+        width: 100%
+    }
+    
+    
+}
+
+/* At first this seemed like a good idea, but we would eventually face problems if the categories name ever changed
+#Reaction, #Memory, #Verbal, #Visual {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid beige;
+}
+
+#Reaction {
+    background-color: rgba(255, 87, 87, 0.1);
+}
+
+#Memory {
+    background-color: rgba(255, 176, 31, 0.1);
+}
+
+#Reaction-img, #Memory-img, #Verbal-img, #Visual-img {
+    display: flex;
+}
+
+#Reaction p, #Memory p, #Verbal p, #Visual p {
+    margin-left: 7px;
+    font-size: 1rem;
+}
+
+#Reaction-img {
+    color: var(--light-red)
+}
+
+#Memory-img {
+    color: var(--orange-yellow);
+}
+
+#Verbal-img {
+    color: var(--green-teal);
+}
+
+#Visual-img {
+    color: var(--cobalt-blue);
+}
+*/
